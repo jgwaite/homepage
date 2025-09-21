@@ -1,0 +1,52 @@
+---
+interface Props {
+	scheduleHref: string;
+	emailUser: string;
+	emailDomain: string;
+	emailTag?: string;
+}
+
+const {
+	scheduleHref,
+	emailUser,
+	emailDomain,
+	emailTag = '',
+} = Astro.props;
+
+const displayEmail = `${emailUser}@${emailDomain}`;
+---
+
+<section class="card border border-white/10 bg-joseph-forest/60 backdrop-blur" aria-labelledby="contact-heading">
+	<div class="card-body gap-6 md:flex md:items-center md:justify-between">
+		<div class="space-y-2 text-center md:text-left">
+			<h2 id="contact-heading" class="card-title text-2xl font-display text-joseph-cream">
+				Let’s collaborate
+			</h2>
+			<p class="text-sm text-joseph-cream/80 md:text-base">
+				Reach out to talk product strategy, shipping cadence, or engineering leadership.
+			</p>
+		</div>
+		<div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-end">
+			<a
+				href={scheduleHref}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="btn border border-joseph-cream/50 bg-transparent text-joseph-cream hover:border-transparent hover:bg-joseph-cream hover:text-joseph-green"
+				data-plausible-event="Schedule Call"
+			>
+				Schedule a call
+			</a>
+			<button
+				type="button"
+				class="btn btn-copy border border-joseph-cream/50 bg-transparent text-joseph-cream hover:border-transparent hover:bg-joseph-cream hover:text-joseph-green"
+				data-copy-email
+				data-email-user={emailUser}
+				data-email-domain={emailDomain}
+				data-email-tag={emailTag}
+				data-plausible-event="Email Copied"
+			>
+				<span data-copy-email-label>{displayEmail}</span>
+			</button>
+		</div>
+	</div>
+</section>

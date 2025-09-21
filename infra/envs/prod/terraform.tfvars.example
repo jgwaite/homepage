@@ -1,0 +1,10 @@
+# Example prod configuration
+# enable_aliases = true
+# aliases = ["josephwaite.ca"]
+# acm_certificate_status = "ISSUED"
+# redirect_enabled = true
+# redirect_aliases = ["josephwaite.com"]
+# redirect_acm_certificate_status = "ISSUED"
+# additional_tags = {
+#   CostCenter = "marketing"
+# }

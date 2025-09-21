@@ -1,0 +1,27 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props extends Project {}
+
+const { title, description, href } = Astro.props;
+---
+
+<a
+	class="card group h-full border border-white/10 bg-white/5 backdrop-blur-lg transition-all duration-300 motion-safe:hover:-translate-y-1 hover:border-joseph-cream/60 hover:shadow-2xl"
+	href={href}
+	target="_blank"
+	rel="noopener noreferrer"
+	data-plausible-project={title}
+>
+	<div class="card-body h-full gap-6">
+		<div class="flex-1 space-y-2 text-left">
+			<h3 class="card-title text-xl text-joseph-cream">{title}</h3>
+			<p class="text-sm text-joseph-cream/80">{description}</p>
+		</div>
+		<div class="card-actions mt-auto justify-start">
+			<span class="btn btn-sm border-joseph-cream/40 bg-transparent text-joseph-cream transition-colors group-hover:bg-joseph-cream group-hover:text-joseph-green">
+				Open
+			</span>
+		</div>
+	</div>
+</a>

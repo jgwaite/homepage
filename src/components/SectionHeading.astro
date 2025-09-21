@@ -1,0 +1,16 @@
+---
+interface Props {
+	for: string;
+	label: string;
+	class?: string;
+}
+
+const { for: targetId, label, class: className = '' } = Astro.props;
+---
+
+<div class={`flex items-center justify-between gap-4 ${className}`.trim()}>
+	<h2 id={targetId} class="text-sm font-semibold uppercase tracking-[0.3em] text-joseph-cream/70">
+		{label}
+	</h2>
+	<span class="h-px flex-1 bg-joseph-cream/20"></span>
+</div>

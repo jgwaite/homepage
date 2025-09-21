@@ -1,0 +1,34 @@
+---
+import "../assets/global.css";
+
+const {
+  title = "Joseph Waite — Product Leadership & Software Development",
+  description = "Product leadership, resilient software, and modern product delivery.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {
+      import.meta.env.PROD && (
+        <script
+          defer
+          data-domain="josephwaite.ca"
+          src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+        />
+      )
+    }
+  </head>
+  <body
+    class="bg-joseph-green text-joseph-cream font-sans min-h-screen antialiased selection:bg-joseph-cream selection:text-joseph-forest"
+  >
+    <slot />
+  </body>
+</html>
