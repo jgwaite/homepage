@@ -4,7 +4,7 @@ import SectionHeading from '../components/SectionHeading.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ContactCard from '../components/ContactCard.astro';
 import projects from '../data/projects';
-import analyticsScript from '../scripts/analytics.ts?url';
+import siteInteractionsScript from '../scripts/siteInteractions.ts?url';
 ---
 
 <Layout
@@ -45,4 +45,4 @@ import analyticsScript from '../scripts/analytics.ts?url';
 		</main>
 </Layout>
 
-<script type="module" src={analyticsScript}></script>
+<script type="module" src={siteInteractionsScript}></script>

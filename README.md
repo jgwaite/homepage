@@ -26,7 +26,7 @@ src/
 ├─ pages/
 │  └─ index.astro         # Homepage assembly using the above building blocks
 └─ scripts/
-   └─ analytics.ts        # Browser script wiring custom Plausible events & clipboard behaviour
+   └─ siteInteractions.ts # Browser script wiring custom Plausible events & clipboard behaviour
 ```
 
 ## Getting Started

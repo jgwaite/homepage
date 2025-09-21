@@ -11,9 +11,9 @@ export const projects: Project[] = [
 		href: 'https://myforge.fit',
 	},
 	{
-		title: 'Architecture Decision Records',
-		description: 'A practical GitHub repo for ADR workflows that keep engineering decisions transparent.',
-		href: 'https://github.com/jgwaite/architecture-decision-records',
+		title: 'Engineering Documentation Framework',
+		description: 'An agent-powered framework for living requirements, architecture, and decisions',
+		href: 'https://github.com/jgwaite/engineering-documentation-framework',
 	},
 	{
 		title: 'Full Stack App Boilerplate',
